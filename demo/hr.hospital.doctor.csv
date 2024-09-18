@@ -1,0 +1,4 @@
+"id","name","description","res_partner_id:id"
+"doctor_1","Dr. Cris Evans","Family pediatrician","hr_hospital.hrh_partner_demo_1"
+"doctor_2","Dr. Eva Chu", "Gynecologist obstetrician","hr_hospital.hrh_partner_demo_2"
+"doctor_3","Dr. Mia Collins", "Gastroenterologist","hr_hospital.hrh_partner_demo_3"

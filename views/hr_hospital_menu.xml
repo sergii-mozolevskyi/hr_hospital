@@ -2,7 +2,7 @@
 <odoo>
     <menuitem id="hr_hospital_main_menu"
               web_icon="hr_hospital.static/description/icon.png"
-              name="hospital" sequence="300"/>
+              name="HR Hospital" sequence="300"/>
 
     <menuitem id="hr_hospital_menu_patients"
               parent="hr_hospital_main_menu"

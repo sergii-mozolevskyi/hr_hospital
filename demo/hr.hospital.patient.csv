@@ -1,0 +1,4 @@
+"id","name","description","res_partner_id:id"
+"patient_1","Cris Levandovskyi","Has allergy for lactose","hr_hospital.hrh_partner_demo_4"
+"patient_2","Inna Mosina","Partient with very ill ctomate acme","hr_hospital.hrh_partner_demo_5"
+"patient_3","John Snow","Bastard and North king","hr_hospital.hrh_partner_demo_6"

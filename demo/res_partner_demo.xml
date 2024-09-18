@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="hrh_partner_demo_1" model="res.partner">
+        <field name="name">Cris Evans</field>
+        <field name="company_id" ref="base.main_company"/>
+    </record>
+
+    <record id="hrh_partner_demo_2" model="res.partner">
+        <field name="name">Eva Chu</field>
+        <field name="company_id" ref="base.main_company"/>
+    </record>
+
+    <record id="hrh_partner_demo_3" model="res.partner">
+        <field name="name">Mia Collins</field>
+        <field name="company_id" ref="base.main_company"/>
+    </record>
+
+    <record id="hrh_partner_demo_4" model="res.partner">
+        <field name="name">Cris Levandovskyi jr</field>
+        <field name="company_id" ref="base.main_company"/>
+    </record>
+
+    <record id="hrh_partner_demo_5" model="res.partner">
+        <field name="name">Inna Mosina</field>
+        <field name="company_id" ref="base.main_company"/>
+    </record>
+
+    <record id="hrh_partner_demo_6" model="res.partner">
+        <field name="name">John Snow</field>
+        <field name="company_id" ref="base.main_company"/>
+    </record>
+
+</odoo>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="hrh_disease_data_1" model="hr.hospital.disease">
+            <field name="name">Flu</field>
+            <field name="description">Flu can cause mild to severe illness, and at times can lead to death</field>
+        </record>
+
+        <record id="hrh_disease_data_2" model="hr.hospital.disease">
+            <field name="name">Varicose veins</field>
+            <field name="description">Medical condition in which superficial veins become enlarged and twisted</field>
+        </record>
+
+        <record id="hrh_disease_data_3" model="hr.hospital.disease">
+            <field name="name">Gastritis</field>
+            <field name="description">Gastritis is the inflammation of the lining of the stomach</field>
+        </record>
+
+    </data>
+</odoo>
