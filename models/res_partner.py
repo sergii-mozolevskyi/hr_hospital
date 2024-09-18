@@ -1,7 +1,6 @@
 import logging
 
 from odoo import models, fields
-from odoo.fields import Many2many
 
 _logger = logging.getLogger(__name__)
 
