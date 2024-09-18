@@ -33,7 +33,7 @@
 
     <record id="action_hr_hospital_doctor_window" model="ir.actions.act_window">
         <field name="name">Doctor</field>
-        <field name="type">ir.action.act_window</field>
+        <field name="type">ir.actions.act_window</field>
         <field name="res_model">hr.hospital.doctor</field>
         <field name="view_mode">tree,form</field>
     </record>
@@ -42,7 +42,7 @@
             id="hr_hospital_menu_doctor"
             action="action_hr_hospital_doctor_window"
             name="Doctors"
-            parent="hr_hospital_menu"
+            parent="hr_hospital_menu_doctors"
             sequence="185"/>
     </data>
 </odoo>

@@ -33,13 +33,13 @@
 
      <record id="action_hr_hospital_patient_window" model="ir.actions.act_window">
         <field name="name">Patients</field>
-        <field name="type">ir.action.act_window</field>
+        <field name="type">ir.actions.act_window</field>
         <field name="res_model">hr.hospital.patient</field>
         <field name="view_mode">tree,form</field>
     </record>
 
-<!--    <menuitem id="hr_hospital_menu_patient"-->
-<!--              action="action_hr_hospital_patient_window"-->
-<!--              parent="hr_hospital_menu_patients"-->
-<!--              name="Patient" sequence="200"/>-->
+    <menuitem id="hr_hospital_menu_patient"
+              action="action_hr_hospital_patient_window"
+              parent="hr_hospital_menu_patients"
+              name="Patient" sequence="200"/>
 </odoo>
