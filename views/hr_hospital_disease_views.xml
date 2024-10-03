@@ -19,7 +19,9 @@
                 <header></header>
                 <sheet>
                     <group>
+                        <field name="active"/>
                         <field name="name"/>
+                        <field name="category_id"/>
                     </group>
                     <group>
                         <field name="description"/>
@@ -31,7 +33,7 @@
 
      <record id="action_hr_hospital_disease_window" model="ir.actions.act_window">
         <field name="name">Diseases</field>
-        <field name="type">ir.action.act_window</field>
+        <field name="type">ir.actions.act_window</field>
         <field name="res_model">hr.hospital.disease</field>
         <field name="view_mode">tree,form</field>
     </record>

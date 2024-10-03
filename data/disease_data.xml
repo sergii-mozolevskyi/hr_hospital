@@ -1,20 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data>
+        <record id="hrh_disease_category_all" model="hr.hospital.disease.category">
+            <field name="name">All</field>
+        </record>
+
+        <record id="hrh_disease_category_1" model="hr.hospital.disease.category">
+            <field name="parent_id" ref="hrh_disease_category_all"/>
+            <field name="name">Infectious diseases</field>
+        </record>
+
+        <record id="hrh_disease_category_2" model="hr.hospital.disease.category">
+            <field name="parent_id" ref="hrh_disease_category_all"/>
+            <field name="name">Deficiency diseases</field>
+        </record>
+
+        <record id="hrh_disease_category_3" model="hr.hospital.disease.category">
+            <field name="parent_id" ref="hrh_disease_category_all"/>
+            <field name="name">Hereditary diseases</field>
+        </record>
+
+        <record id="hrh_disease_category_4" model="hr.hospital.disease.category">
+            <field name="parent_id" ref="hrh_disease_category_all"/>
+            <field name="name">Physiological diseases</field>
+        </record>
 
         <record id="hrh_disease_data_1" model="hr.hospital.disease">
             <field name="name">Flu</field>
+            <field name="category_id" ref="hrh_disease_category_1"/>
             <field name="description">Flu can cause mild to severe illness, and at times can lead to death</field>
         </record>
 
         <record id="hrh_disease_data_2" model="hr.hospital.disease">
             <field name="name">Varicose veins</field>
+            <field name="category_id" ref="hrh_disease_category_all"/>
             <field name="description">Medical condition in which superficial veins become enlarged and twisted</field>
         </record>
 
         <record id="hrh_disease_data_3" model="hr.hospital.disease">
             <field name="name">Gastritis</field>
+            <field name="category_id" ref="hrh_disease_category_all"/>
             <field name="description">Gastritis is the inflammation of the lining of the stomach</field>
+        </record>
+
+        <record id="hrh_disease_data_4" model="hr.hospital.disease">
+            <field name="name">Sickle-cell disease</field>
+            <field name="category_id" ref="hrh_disease_category_3"/>
+            <field name="description">Sickle cell disease affects the shape of red blood cells and their ability to carry oxygen.</field>
+        </record>
+
+        <record id="hrh_disease_data_5" model="hr.hospital.disease">
+            <field name="name">COVID-19</field>
+            <field name="category_id" ref="hrh_disease_category_1"/>
+            <field name="description">Coronavirus disease (COVID-19) is an infectious disease caused by the SARS-CoV-2 virus.</field>
+        </record>
+
+        <record id="hrh_disease_data_6" model="hr.hospital.disease">
+            <field name="name">Hepatitis A</field>
+            <field name="category_id" ref="hrh_disease_category_1"/>
+            <field name="description">Hepatitis A is a contagious liver disease caused by the hepatitis A virus (HAV).</field>
         </record>
 
     </data>

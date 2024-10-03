@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="hr_hospital_doctor_speciality_tree" model="ir.ui.view">
+        <field name="name">hr.hospital.doctor.speciality.tree ()</field>
+        <field name="model">hr.hospital.doctor.speciality</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="description"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="hr_hospital_doctor_speciality_form" model="ir.ui.view">
+        <field name="name">hr.hospital.doctor.speciality.form ()</field>
+        <field name="model">hr.hospital.doctor.speciality</field>
+        <field name="arch" type="xml">
+            <form>
+                <header></header>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="description"/>
+                        </group>
+                        <group>
+                            <field name="active"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+     <record id="action_hr_hospital_doctor_speciality_window" model="ir.actions.act_window">
+        <field name="name">Speciality</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">hr.hospital.doctor.speciality</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="hr_hospital_menu_speciality"
+              action="action_hr_hospital_doctor_speciality_window"
+              parent="hr_hospital_menu_doctors"
+              name="Speciality" sequence="200"/>
+</odoo>

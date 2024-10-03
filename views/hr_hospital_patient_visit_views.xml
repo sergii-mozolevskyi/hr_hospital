@@ -6,8 +6,11 @@
         <field name="arch" type="xml">
             <tree>
                 <field name="name"/>
+                <field name="scheduled_visit_date"/>
+                <field name="visit_date"/>
+                <field name="doctor_id"/>
+                <field name="patient_id"/>
                 <field name="description"/>
-                <field name="res_partner_id"/>
             </tree>
         </field>
     </record>
@@ -21,10 +24,16 @@
                 <sheet>
                     <group>
                         <field name="name"/>
+                        <field name="scheduled_visit_date"/>
+                        <field name="doctor_id"/>
+                        <field name="patient_id"/>
+                        <field name="visit_date"/>
+                        <field name="diagnosis_id"/>
                         <field name="description"/>
                     </group>
                     <group>
-                        <field name="res_partner_id"/>
+                        <field name="active"/>
+                        <field name="state"/>
                     </group>
                 </sheet>
             </form>
@@ -33,8 +42,13 @@
 
      <record id="action_hr_hospital_patient_visit_window" model="ir.actions.act_window">
         <field name="name">Patient visits</field>
-        <field name="type">ir.action.act_window</field>
+        <field name="type">ir.actions.act_window</field>
         <field name="res_model">hr.hospital.patient.visit</field>
         <field name="view_mode">tree,form</field>
     </record>
+
+    <menuitem id="hr_hospital_menu_patient_visit"
+              action="action_hr_hospital_patient_visit_window"
+              parent="hr_hospital_menu_patients"
+              name="Patient visits" sequence="200"/>
 </odoo>
