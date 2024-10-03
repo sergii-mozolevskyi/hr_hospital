@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="hr_hospital_diagnosis_tree" model="ir.ui.view">
+        <field name="name">hr.hospital.diagnosis.tree ()</field>
+        <field name="model">hr.hospital.diagnosis</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="patient_visit_id"/>
+                <field name="patient_id"/>
+                <field name="doctor_id"/>
+                <field name="disease_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="hr_hospital_diagnosis_form" model="ir.ui.view">
+        <field name="name">hr.hospital.diagnosis.form ()</field>
+        <field name="model">hr.hospital.diagnosis</field>
+        <field name="arch" type="xml">
+            <form>
+                <header></header>
+                <sheet>
+                    <group>
+                        <field name="active"/>
+                        <field name="name"/>
+                        <field name="patient_visit_id"/>
+                        <field name="patient_id"/>
+                        <field name="doctor_id"/>
+                        <field name="is_intern" invisible="True"/>
+                        <field name="is_approved" readonly="is_intern"/>
+                    </group>
+                    <group>
+                        <field name="disease_id"/>
+                        <field name="appointment_treatment"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_hr_hospital_diagnosis_window" model="ir.actions.act_window">
+        <field name="name">Diagnosis</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">hr.hospital.diagnosis</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="hr_hospital_menu_diagnosis"
+              action="action_hr_hospital_diagnosis_window"
+              parent="hr_hospital_menu_doctors"
+              name="Diagnosis" sequence="200"/>
+</odoo>

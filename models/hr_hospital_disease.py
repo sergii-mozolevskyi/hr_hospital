@@ -13,6 +13,17 @@ class HrHospitalDisease(models.Model):
 
     active = fields.Boolean(
         default=True,
+        groups='base.group_no_one',
+        copy=False,
     )
 
-    description = fields.Text()
+    description = fields.Text(
+        index=True,
+        translate=True,
+    )
+
+    category_id = fields.Many2one(
+        comodel_name='hr.hospital.disease.category',
+        string='Disease category',
+        required=True
+    )

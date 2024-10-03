@@ -1,0 +1,29 @@
+<odoo>
+    <record id="hr_hospital_personal_doctor_wizard_form" model="ir.ui.view">
+        <field name="name">hr.hospital.personal.doctor.wizard.form</field>
+        <field name="model">hr.hospital.personal.doctor.wizard</field>
+        <field name="arch" type="xml">
+            <form>
+                <div class="alert alert-info text-center" role="status">
+                    This wizard add possibility mass redefinition of the personal doctor for patients.
+                </div>
+                <group>
+                    <group>
+                        <field name="personal_doctor_id"/>
+                    </group>
+                </group>
+                <footer>
+                    <button string="Add doctor" name="change_personal_doctor" type="object" class="oe_highlight" data-hotkey="q"/>
+                    <button string="Cancel" class="btn btn-secondary" special="cancel" data-hotkey="x"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="hr_hospital_personal_doctor_wizard_action" model="ir.actions.act_window">
+        <field name="name">Change personal doctor</field>
+        <field name="res_model">hr.hospital.personal.doctor.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+</odoo>
