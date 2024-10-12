@@ -11,4 +11,8 @@
     <menuitem id="hr_hospital_menu_doctors"
               parent="hr_hospital_main_menu"
               name="Doctors" sequence="100"/>
+
+    <menuitem id="hr_hospital_menu_other"
+              parent="hr_hospital_main_menu"
+              name="Other" sequence="100"/>
 </odoo>

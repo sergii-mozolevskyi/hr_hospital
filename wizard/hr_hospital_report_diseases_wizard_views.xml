@@ -31,8 +31,17 @@
     <record id="hr_hospital_report_diseases_wizard_action" model="ir.actions.act_window">
         <field name="name">Report on diseases</field>
         <field name="res_model">hr.hospital.report.diseases.wizard</field>
-        <field name="view_mode">form</field>
+        <field name="view_mode">tree,form</field>
         <field name="target">new</field>
+    </record>
+
+    <record id="hr_hospital_diseases_wizard_action" model="ir.actions.act_window">
+        <field name="name">Report on diseases</field>
+        <field name="res_model">hr.hospital.report.diseases.wizard</field>
+        <field name="view_mode">tree,form</field>
+        <field name="target">new</field>
+        <field name="binding_model_id" ref="hr_hospital.model_hr_hospital_doctor"/>
         <field name="binding_type">report</field>
+        <field name="binding_view_types">list,form</field>
     </record>
 </odoo>

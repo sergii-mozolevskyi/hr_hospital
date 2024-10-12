@@ -42,6 +42,11 @@ class HrHospitalDiagnosis(models.Model):
         string='Disease',
     )
 
+    disease_category = fields.Many2one(
+        related='disease_id.category_id',
+        store=True,
+    )
+
     appointment_treatment = fields.Text()
 
     is_approved = fields.Boolean(

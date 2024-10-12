@@ -4,7 +4,8 @@
         <field name="name">hr.hospital.disease.tree ()</field>
         <field name="model">hr.hospital.disease</field>
         <field name="arch" type="xml">
-            <tree>
+            <tree default_group_by="category_id">
+                <field name="category_id"/>
                 <field name="name"/>
                 <field name="description"/>
             </tree>
@@ -15,7 +16,7 @@
         <field name="name">hr.hospital.disease.form ()</field>
         <field name="model">hr.hospital.disease</field>
         <field name="arch" type="xml">
-            <form>
+            <form duplicate="0">
                 <header></header>
                 <sheet>
                     <group>
@@ -31,10 +32,27 @@
         </field>
     </record>
 
+    <record id="hr_hospital_disease_search" model="ir.ui.view">
+        <field name="name">hr.hospital.disease.search (hr_hospital_disease)</field>
+        <field name="model">hr.hospital.disease</field>
+        <field name="arch" type="xml">
+            <search string="Filters">
+                <searchpanel>
+                    <field name="category_id" select="one" hierarchize="1"/>
+                </searchpanel>
+            </search>
+        </field>
+    </record>
+
      <record id="action_hr_hospital_disease_window" model="ir.actions.act_window">
         <field name="name">Diseases</field>
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">hr.hospital.disease</field>
         <field name="view_mode">tree,form</field>
     </record>
+
+    <menuitem id="hr_hospital_menu_disease"
+              action="action_hr_hospital_disease_window"
+              parent="hr_hospital_menu_other"
+              name="Diseases" sequence="200"/>
 </odoo>
