@@ -1,0 +1,7 @@
+"id","name","patient_visit_id","disease_id","is_approved"
+demo_diagnosis_0,"Flu",hr_hospital.demo_patient_visit_1,hr_hospital.hrh_disease_data_1,1
+demo_diagnosis_1,"COVID-19",hr_hospital.demo_patient_visit_1,hr_hospital.hrh_disease_data_5,1
+demo_diagnosis_2,"Helocobacter",hr_hospital.demo_patient_visit_2,hr_hospital.hrh_disease_data_3,1
+demo_diagnosis_3,"COVID-19",hr_hospital.demo_patient_visit_2,hr_hospital.hrh_disease_data_5,0
+demo_diagnosis_4,"Suspect Hepatitis",hr_hospital.demo_patient_visit_3,hr_hospital.hrh_disease_data_6,0
+demo_diagnosis_5," Suspect Sickle-cell disease",hr_hospital.demo_patient_visit_4,hr_hospital.hrh_disease_data_4,1

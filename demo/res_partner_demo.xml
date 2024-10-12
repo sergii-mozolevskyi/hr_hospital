@@ -31,4 +31,14 @@
         <field name="company_id" ref="base.main_company"/>
     </record>
 
+    <record id="hrh_partner_demo_7" model="res.partner">
+        <field name="name">John Biber</field>
+        <field name="company_id" ref="base.main_company"/>
+    </record>
+
+    <record id="hrh_partner_demo_8" model="res.partner">
+        <field name="name">Oleg Tinkoff</field>
+        <field name="company_id" ref="base.main_company"/>
+    </record>
+
 </odoo>

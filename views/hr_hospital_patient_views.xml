@@ -20,8 +20,18 @@
         <field name="model">hr.hospital.patient</field>
         <field name="arch" type="xml">
             <form>
-                <header></header>
+                <header>
+                    <button name="add_visit" type="object" string="Add visit" />
+                </header>
                 <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button type="object" name="show_history_diagnosis" icon="fa-file-text-o">
+                            <field name="diagnosis_count" widget="statinfo" string="Diagnosis"/>
+                        </button>
+                        <button type="object" name="show_patient_visits" icon="fa-list-ol">
+                            <field name="patient_visit_count" widget="statinfo" string="Visits"/>
+                        </button>
+                    </div>
                     <field name="photo" widget="image" class="oe_avatar m-0"
                             options='{"zoom": true, "preview_image":"avatar_256"}'/>
                     <group>
@@ -46,7 +56,18 @@
         </field>
     </record>
 
-     <record id="action_hr_hospital_patient_window" model="ir.actions.act_window">
+    <record id="hr_hospital_patient_search" model="ir.ui.view">
+        <field name="name">hr.hospital.patient.search (hr_hospital_patient)</field>
+        <field name="model">hr.hospital.patient</field>
+        <field name="arch" type="xml">
+            <search string="Filters">
+                <field name="person_name" string="Full name"/>
+                <field name="phone" string="Phone"/>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_hr_hospital_patient_window" model="ir.actions.act_window">
         <field name="name">Patients</field>
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">hr.hospital.patient</field>

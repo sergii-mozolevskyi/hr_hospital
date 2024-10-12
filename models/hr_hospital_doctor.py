@@ -48,3 +48,33 @@ class HrHospitalDoctor(models.Model):
             ('is_intern', '=', False)
         ],
     )
+
+    mentor_phone = fields.Char(
+        related='mentor_id.phone',
+        string='Mentor phone',
+    )
+
+    mentor_photo = fields.Image(
+        related='mentor_id.photo',
+        string='Mentor photo',
+    )
+
+    intern_ids = fields.One2many(
+        comodel_name='hr.hospital.doctor',
+        inverse_name='mentor_id',
+        string='Interns',
+        readonly=True,
+    )
+
+    def add_visit(self):
+        return {
+            'type': 'ir.actions.act_window',
+            'name': 'Quick create visit',
+            'res_model': 'hr.hospital.patient.visit',
+            'target': 'new',
+            'view_mode': 'form',
+            'view_type': 'form',
+            'context': {
+                'quick_create': True,
+            },
+        }

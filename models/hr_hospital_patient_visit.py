@@ -84,7 +84,9 @@ class HrHospitalPatientVisit(models.Model):
     @api.constrains('visit_date', 'doctor_id', 'state')
     def _constrains_visit_date_doctor_id_state(self):
         self.ensure_one()
-        if self.state == 'completed':
+        today_date = fields.Datetime.today().strftime("%Y-%m-%d 00:00:00")
+        start_date = self.scheduled_visit_date.strftime("%Y-%m-%d 23:59:59")
+        if self.state == 'completed' and start_date < today_date:
             raise exceptions.ValidationError(
                 ("It is forbidden to edit, after the visit has taken place"))
 

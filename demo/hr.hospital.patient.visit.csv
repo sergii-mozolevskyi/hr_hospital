@@ -1,0 +1,5 @@
+"id","name","state","scheduled_visit_date","visit_date","doctor_id:id","patient_id:id"
+"demo_patient_visit_1","Suspected flu","scheduled","2024-10-31 09:50:00","2024-10-31 10:00:00","hr_hospital.hr_hospital.doctor_1","hr_hospital.hr_hospital.patient_1"
+"demo_patient_visit_2","Suspicion of infection","canceled","2013-10-31 09:50:00","2013-11-31 09:50:00","hr_hospital.hr_hospital.doctor_2","hr_hospital.hr_hospital.patient_3"
+"demo_patient_visit_3","Heals check-in","scheduled","2024-10-09 09:50:00","2024-10-31 09:50:00","hr_hospital.hr_hospital.doctor_1","hr_hospital.hr_hospital.patient_2"
+"demo_patient_visit_4","Suspected flu","scheduled","2024-10-22 09:50:00","2024-10-22 12:10:00","hr_hospital.hr_hospital.doctor_3","hr_hospital.hr_hospital.patient_1"

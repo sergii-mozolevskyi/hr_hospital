@@ -36,6 +36,7 @@
         'demo/res_partner_demo.xml',
         'demo/hr.hospital.doctor.csv',
         'demo/hr.hospital.patient.csv',
+        'demo/hr.hospital.patient.visit.csv',
     ],
 
     'installable': True,
