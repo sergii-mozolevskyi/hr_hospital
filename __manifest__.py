@@ -37,6 +37,7 @@
         'demo/hr.hospital.doctor.csv',
         'demo/hr.hospital.patient.csv',
         'demo/hr.hospital.patient.visit.csv',
+        'demo/hr.hospital.diagnosis.csv',
     ],
 
     'installable': True,
