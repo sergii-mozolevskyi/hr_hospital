@@ -1,4 +1,4 @@
-"id","person_name","description","res_partner_id:id","gender","phone"
-"patient_1","Levandovskyi Cris","Has allergy for lactose","hr_hospital.hrh_partner_demo_4","male","+900876543223"
-"patient_2","Mosina Inna","Partient with very ill ctomate acme","hr_hospital.hrh_partner_demo_5","female","+380974563636"
-"patient_3","Snow John","Bastard and North king","hr_hospital.hrh_partner_demo_6","male","+88004567473"
+"id","person_name","description","res_partner_id:id","gender","phone","birthday_date"
+"patient_1","Levandovskyi Cris","Has allergy for lactose","hr_hospital.hrh_partner_demo_4","male","+900876543223","1987-10-31 10:00:00"
+"patient_2","Mosina Inna","Partient with very ill ctomate acme","hr_hospital.hrh_partner_demo_5","female","+380974563636","1967-10-31 10:00:00"
+"patient_3","Snow John","Bastard and North king","hr_hospital.hrh_partner_demo_6","male","+88004567473","2004-10-31 10:00:00"
