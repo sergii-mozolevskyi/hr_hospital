@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <record id="patient_1" model="hr.hospital.patient">
+            <field name="name">mr. Levandovskyi Cris</field>
+            <field name="person_name">Levandovskyi Cris</field>
+            <field name="description">Has allergy for lactose</field>
+            <field name="res_partner_id" ref="hr_hospital.hrh_partner_demo_4"/>
+            <field name="gender">male</field>
+            <field name="phone">+900876543223</field>
+            <field name="birthday_date" eval="(DateTime.now() - timedelta(years=29)).strftime('%Y-%m-%d')"/>
+        </record>
+
+        <record id="patient_2" model="hr.hospital.patient">
+            <field name="name">ms. Mosina Inna</field>
+            <field name="person_name">Mosina Inna</field>
+            <field name="description">Patient with very ill stomate acme</field>
+            <field name="res_partner_id" ref="hr_hospital.hrh_partner_demo_5"/>
+            <field name="gender">female</field>
+            <field name="phone">+380974563636</field>
+            <field name="birthday_date" eval="(DateTime.now() - timedelta(years=24)).strftime('%Y-%m-%d')"/>
+        </record>
+
+        <record id="patient_3" model="hr.hospital.patient">
+            <field name="name">mr. Snow John</field>
+            <field name="person_name">Snow John</field>
+            <field name="description">Bastard and North king</field>
+            <field name="res_partner_id" ref="hr_hospital.hrh_partner_demo_6"/>
+            <field name="gender">male</field>
+            <field name="phone">+88004567473</field>
+            <field name="birthday_date" eval="(DateTime.now() - timedelta(years=37)).strftime('%Y-%m-%d')"/>
+        </record>
+
+    </data>
+</odoo>

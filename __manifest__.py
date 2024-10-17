@@ -16,6 +16,7 @@
     },
 
     'data': [
+        'security/hr_hospital_groups.xml',
         'security/ir.model.access.csv',
         'data/disease_data.xml',
 
@@ -37,9 +38,9 @@
     'demo': [
         'demo/res_partner_demo.xml',
         'demo/hr.hospital.doctor.csv',
-        'demo/hr.hospital.patient.csv',
-        'demo/hr.hospital.patient.visit.csv',
-        'demo/hr.hospital.diagnosis.csv',
+        'demo/hr_hospital_patient_demo.xml',
+        'demo/hr_hospital_patient_visit_demo.xml',
+        'demo/hr_hospital_diagnosis_demo.xml',
     ],
 
     'installable': True,

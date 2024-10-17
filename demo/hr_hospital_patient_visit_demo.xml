@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <record id="demo_patient_visit_1" model="hr.hospital.patient.visit">
+            <field name="name">Suspected flu</field>
+            <field name="state">scheduled</field>
+            <field name="scheduled_visit_date" eval="(DateTime.now() + timedelta(days=10)).strftime('%Y-%m-%d 08:00:00')"/>
+            <field name="visit_date" eval="(DateTime.now() + timedelta(days=10)).strftime('%Y-%m-%d 08:10:00')"/>
+            <field name="doctor_id" ref="hr_hospital.doctor_1"/>
+            <field name="patient_id" ref="hr_hospital.patient_1"/>
+        </record>
+
+        <record id="demo_patient_visit_2" model="hr.hospital.patient.visit">
+            <field name="name">Suspicion of infection</field>
+            <field name="state">canceled</field>
+            <field name="scheduled_visit_date" eval="(DateTime.now() + timedelta(days=1)).strftime('%Y-%m-%d 08:00:00')"/>
+            <field name="visit_date" eval="(DateTime.now() + timedelta(days=1)).strftime('%Y-%m-%d 10:10:00')"/>
+            <field name="doctor_id" ref="hr_hospital.doctor_2"/>
+            <field name="patient_id" ref="hr_hospital.patient_3"/>
+        </record>
+
+        <record id="demo_patient_visit_3" model="hr.hospital.patient.visit">
+            <field name="name">Heals check-in</field>
+            <field name="state">scheduled</field>
+            <field name="scheduled_visit_date" eval="(DateTime.now() + timedelta(days=6)).strftime('%Y-%m-%d 08:00:00')"/>
+            <field name="visit_date" eval="(DateTime.now() + timedelta(days=6)).strftime('%Y-%m-%d 10:10:00')"/>
+            <field name="doctor_id" ref="hr_hospital.doctor_1"/>
+            <field name="patient_id" ref="hr_hospital.patient_2"/>
+        </record>
+
+        <record id="demo_patient_visit_4" model="hr.hospital.patient.visit">
+            <field name="name">Suspected flu</field>
+            <field name="state">scheduled</field>
+            <field name="scheduled_visit_date" eval="(DateTime.now() + timedelta(days=3)).strftime('%Y-%m-%d 09:00:00')"/>
+            <field name="visit_date" eval="(DateTime.now() + timedelta(days=3)).strftime('%Y-%m-%d 09:10:00')"/>
+            <field name="doctor_id" ref="hr_hospital.doctor_3"/>
+            <field name="patient_id" ref="hr_hospital.patient_1"/>
+        </record>
+
+    </data>
+</odoo>

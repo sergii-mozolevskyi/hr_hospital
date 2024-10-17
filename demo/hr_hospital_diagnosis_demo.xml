@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <record id="demo_diagnosis_0" model="hr.hospital.diagnosis">
+            <field name="name">Flu</field>
+            <field name="patient_visit_id" ref="hr_hospital.demo_patient_visit_1"/>
+            <field name="disease_id" ref="hr_hospital.hrh_disease_data_1"/>
+            <field name="is_approved">True</field>
+        </record>
+
+        <record id="demo_diagnosis_1" model="hr.hospital.diagnosis">
+            <field name="name">COVID-19</field>
+            <field name="patient_visit_id" ref="hr_hospital.demo_patient_visit_1"/>
+            <field name="disease_id" ref="hr_hospital.hrh_disease_data_5"/>
+            <field name="is_approved">True</field>
+        </record>
+
+        <record id="demo_diagnosis_2" model="hr.hospital.diagnosis">
+            <field name="name">Helocobacter</field>
+            <field name="patient_visit_id" ref="hr_hospital.demo_patient_visit_2"/>
+            <field name="disease_id" ref="hr_hospital.hrh_disease_data_3"/>
+            <field name="is_approved">True</field>
+        </record>
+
+        <record id="demo_diagnosis_3" model="hr.hospital.diagnosis">
+            <field name="name">COVID-19</field>
+            <field name="patient_visit_id" ref="hr_hospital.demo_patient_visit_2"/>
+            <field name="disease_id" ref="hr_hospital.hrh_disease_data_5"/>
+            <field name="is_approved">False</field>
+        </record>
+
+        <record id="demo_diagnosis_4" model="hr.hospital.diagnosis">
+            <field name="name">Suspect Hepatitis</field>
+            <field name="patient_visit_id" ref="hr_hospital.demo_patient_visit_3"/>
+            <field name="disease_id" ref="hr_hospital.hrh_disease_data_6"/>
+            <field name="is_approved">False</field>
+        </record>
+
+        <record id="demo_diagnosis_5" model="hr.hospital.diagnosis">
+            <field name="name">Suspect Sickle-cell disease</field>
+            <field name="patient_visit_id" ref="hr_hospital.demo_patient_visit_4"/>
+            <field name="disease_id" ref="hr_hospital.hrh_disease_data_4"/>
+            <field name="is_approved">True</field>
+        </record>
+
+    </data>
+</odoo>
