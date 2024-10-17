@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <record id="hr_hospital_patient_rule" model="ir.rule">
+            <field name="name">HR Hospital users can only view own Patient</field>
+            <field name="model_id" ref="model_hr_hospital_patient"/>
+            <field name="domain_force">[('res_partner_id.user_id', '=', user.id)]</field>
+            <field name="groups" eval="[(4, ref('group_hr_hospital_patient'))]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_unlink" eval="False"/>
+        </record>
+
+        <record id="hr_hospital_rule_admin" model="ir.rule">
+            <field name="name">HR Hospital administrators have full rights on visits</field>
+            <field name="model_id" ref="model_hr_hospital_patient_visit"/>
+            <field name="domain_force">[(1, '=', 1)]</field>
+            <field name="groups" eval="[(4, ref('group_hr_hospital_admin'))]"/>
+        </record>
+
+    </data>
+</odoo>
