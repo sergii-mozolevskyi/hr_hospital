@@ -13,7 +13,6 @@ class HrHospitalDisease(models.Model):
 
     active = fields.Boolean(
         default=True,
-        groups='base.group_no_one',
         copy=False,
     )
 

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <data noupdate="1">
+    <data>
 
         <record id="category_hr_hospital" model="ir.module.category">
             <field name="name">HR Hospital</field>
@@ -15,19 +15,19 @@
         </record>
 
         <record id="group_hr_hospital_doctor" model="res.groups">
-            <field name="name">Doctor (intern)</field>
+            <field name="name">Doctor</field>
             <field name="implied_ids"
-                   eval="[(4, ref('group_hr_hospital_patient'))]"/>
+                   eval="[(6, 0, [ref('group_hr_hospital_patient')])]"/>
             <field name="category_id" ref="category_hr_hospital"/>
-            <field name="comment">Doctor intern (HR Hospital)</field>
+            <field name="comment">Doctor (HR Hospital)</field>
         </record>
 
         <record id="group_hr_hospital_doctor_intern" model="res.groups">
-            <field name="name">Doctor</field>
+            <field name="name">Doctor (Intern)</field>
             <field name="implied_ids"
-                   eval="[(6, 0, [ref('group_hr_hospital_patient'), ref('group_hr_hospital_doctor'),] )]"/>
+                   eval="[(6, 0, [ref('group_hr_hospital_doctor')])]"/>
             <field name="category_id" ref="category_hr_hospital"/>
-            <field name="comment">Doctor (HR Hospital)</field>
+            <field name="comment">Doctor intern (HR Hospital)</field>
         </record>
 
         <record id="group_hr_hospital_manager" model="res.groups">
