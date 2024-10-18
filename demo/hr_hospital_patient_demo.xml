@@ -9,7 +9,7 @@
             <field name="res_partner_id" ref="hr_hospital.hrh_partner_demo_4"/>
             <field name="gender">male</field>
             <field name="phone">+900876543223</field>
-            <field name="birthday_date" eval="(DateTime.now() - timedelta(days=9855))')"/>
+            <field name="birthday_date" eval="(DateTime.now() - timedelta(days=9855))"/>
         </record>
 
         <record id="patient_2" model="hr.hospital.patient">
