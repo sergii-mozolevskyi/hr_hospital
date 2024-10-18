@@ -1,6 +1,6 @@
-"id","person_name","description","res_partner_id:id","gender","phone","is_intern"
-"doctor_1","Evans Cris","Family pediatrician","hr_hospital.hrh_partner_demo_1","male","+89056784646",False
-"doctor_2","Chu Eva", "Gynecologist obstetrician","hr_hospital.hrh_partner_demo_2","female","+87653232114",False
-"doctor_3","Collins Mia", "Gastroenterologist","hr_hospital.hrh_partner_demo_3","female","+9876747474",False
-"doctor_4","John Biber", "Gastroenterologist","hr_hospital.hrh_partner_demo_7","male","+9876745556",True
-"doctor_5","Oleg Tinkoff", "Gastroenterologist","hr_hospital.hrh_partner_demo_8","male","+9871111556",True
+"id","name","person_name","description","res_partner_id:id","gender","phone","is_intern"
+"doctor_1","dr Evans Cris","Evans Cris","Family pediatrician","hr_hospital.hrh_partner_demo_1","male","+89056784646",False
+"doctor_2","dr Chu Eva","Chu Eva", "Gynecologist obstetrician","hr_hospital.hrh_partner_demo_2","female","+87653232114",False
+"doctor_3","dr Collins Mia","Collins Mia", "Gastroenterologist","hr_hospital.hrh_partner_demo_3","female","+9876747474",False
+"doctor_4","dr John Biber","John Biber", "Gastroenterologist","hr_hospital.hrh_partner_demo_7","male","+9876745556",True
+"doctor_5","dr Oleg Tinkoff","Oleg Tinkoff", "Gastroenterologist","hr_hospital.hrh_partner_demo_8","male","+9871111556",True
