@@ -1,9 +1,9 @@
-UA Odoo School: Hr Hospital
+# UA Odoo School: Hr Hospital
 This module extends the functionality of sample modules for Odoo School UA,
 course 'Odoo Development Base' section 'Module formalization',
 and shows how to add documentation to a module.
 
-Installation
+# Installation
 To install this module, you need to:
 
 Clone repository.
