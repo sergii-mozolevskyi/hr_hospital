@@ -56,6 +56,10 @@ class HrHospitalPatientVisit(models.Model):
 
     @api.ondelete(at_uninstall=False)
     def _ondelete(self):
+        """
+        It is forbidden to delete visits with diagnoses.
+        Field: diagnosis_id
+        """
         self.ensure_one()
         if self.diagnosis_id:
             raise exceptions.UserError(
@@ -63,6 +67,17 @@ class HrHospitalPatientVisit(models.Model):
 
     @api.constrains('scheduled_visit_date', 'doctor_id', 'patient_id')
     def _constrains_scheduled_visit_date_doctor_patient(self):
+        """
+        Checks and prevents you from creating a repeat visit to the doctor
+        on the same day for the same patient.
+        domain=[
+                ('doctor_id', '=', self.doctor_id.id),
+                ('patient_id', '=', self.patient_id.id),
+                ('scheduled_visit_date', '>', start_date_today),
+                ('scheduled_visit_date', '<', end_date_today),
+                ('id', '!=', self.id),
+            ]
+        """
         self.ensure_one()
         start_date = self.scheduled_visit_date.strftime("%Y-%m-%d 00:00:00")
         end_date = self.scheduled_visit_date.strftime("%Y-%m-%d 23:59:59")
@@ -82,6 +97,10 @@ class HrHospitalPatientVisit(models.Model):
 
     @api.constrains('visit_date', 'doctor_id', 'state')
     def _constrains_visit_date_doctor_id_state(self):
+        """
+        It is forbidden to edit visits that have already taken place
+        and have the state = 'completed'
+        """
         self.ensure_one()
         today_date = fields.Datetime.today().strftime("%Y-%m-%d 00:00:00")
         start_date = self.scheduled_visit_date.strftime("%Y-%m-%d 23:59:59")
@@ -91,6 +110,9 @@ class HrHospitalPatientVisit(models.Model):
 
     @api.constrains('active')
     def _constrains_active(self):
+        """
+        Prevents the possibility of archiving visits with diagnoses.
+        """
         self.ensure_one()
         if not self.active and self.diagnosis_id:
             raise exceptions.UserError(

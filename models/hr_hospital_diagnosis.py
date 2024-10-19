@@ -54,6 +54,12 @@ class HrHospitalDiagnosis(models.Model):
 
     @api.model
     def create(self, vals_list):
+        """
+        When new diagnosis created by the doctor, who not intern,
+        the value is_approved always True.
+        :param vals_list: list of params for new model.
+        :return None:
+        """
         res = super().create(vals_list)
         if not res.is_intern:
             res.update({'is_approved': True})
