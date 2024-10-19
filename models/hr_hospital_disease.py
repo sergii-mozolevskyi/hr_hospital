@@ -9,11 +9,12 @@ class HrHospitalDisease(models.Model):
     _name = 'hr.hospital.disease'
     _description = 'Types of diseases (diseases)'
 
-    name = fields.Char()
+    name = fields.Char(
+        translate=True,
+    )
 
     active = fields.Boolean(
         default=True,
-        groups='base.group_no_one',
         copy=False,
     )
 

@@ -18,6 +18,7 @@
     'data': [
         'security/hr_hospital_groups.xml',
         'security/ir.model.access.csv',
+        'security/hr_hospital_security.xml',
         'data/disease_data.xml',
 
         'wizard/hr_hospital_personal_doctor_wizard_views.xml',

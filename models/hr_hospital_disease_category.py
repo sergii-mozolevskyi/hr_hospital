@@ -17,13 +17,15 @@ class HrHospitalDiseaseCategory(models.Model):
         string='Name',
         index='trigram',
         required=True,
+        translate=True,
     )
 
     complete_name = fields.Char(
         string='Complete Name',
         compute='_compute_complete_name',
         recursive=True,
-        store=True
+        store=True,
+        translate=True,
     )
 
     parent_id = fields.Many2one(
@@ -46,6 +48,10 @@ class HrHospitalDiseaseCategory(models.Model):
 
     @api.constrains('parent_id')
     def _check_category_recursion(self):
+        """
+        Check when user try to create recursion category
+        :return exception.ValidationError:
+        """
         if not self._check_recursion():
             raise exceptions.ValidationError(
                 ('You cannot create recursive categories.')
@@ -53,11 +59,19 @@ class HrHospitalDiseaseCategory(models.Model):
 
     @api.model
     def name_create(self, name):
+        """
+        Creates a category (parent or child) by name
+        :params name: The name of new category
+        :return tuple: [category.id, category.display_name]
+        """
         category = self.create({'name': name})
         return category.id, category.display_name
 
     @api.depends('name', 'parent_id.complete_name')
     def _compute_complete_name(self):
+        """
+        Forms the final name taking into account the subordination
+        """
         for category in self:
             if category.parent_id:
                 category.complete_name = '%s / %s' % (

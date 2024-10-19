@@ -17,7 +17,6 @@ class HrHospitalDoctor(models.Model):
 
     active = fields.Boolean(
         default=True,
-        groups='base.group_no_one',
         copy=False,
     )
 
@@ -68,12 +67,18 @@ class HrHospitalDoctor(models.Model):
     )
 
     def _get_report_base_filename(self):
+        """
+        Return name of file report for current doctor
+        """
         file_name = string.Template('$name($speciality)')
         return file_name.substitute(
             name=self.name,
             speciality=self.speciality_id.name,)
 
     def add_visit(self):
+        """
+        Add visit command that use in the main view
+        """
         return {
             'type': 'ir.actions.act_window',
             'name': 'Quick create visit',

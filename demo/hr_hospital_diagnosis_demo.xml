@@ -14,6 +14,7 @@
             <field name="patient_visit_id" ref="hr_hospital.demo_patient_visit_1"/>
             <field name="disease_id" ref="hr_hospital.hrh_disease_data_5"/>
             <field name="is_approved">True</field>
+            <field name="doctor_id" ref="hr_hospital.demo_doctor_1"/>
         </record>
 
         <record id="demo_diagnosis_2" model="hr.hospital.diagnosis">
@@ -21,6 +22,7 @@
             <field name="patient_visit_id" ref="hr_hospital.demo_patient_visit_2"/>
             <field name="disease_id" ref="hr_hospital.hrh_disease_data_3"/>
             <field name="is_approved">True</field>
+            <field name="doctor_id" ref="hr_hospital.demo_doctor_2"/>
         </record>
 
         <record id="demo_diagnosis_3" model="hr.hospital.diagnosis">
@@ -28,6 +30,7 @@
             <field name="patient_visit_id" ref="hr_hospital.demo_patient_visit_2"/>
             <field name="disease_id" ref="hr_hospital.hrh_disease_data_5"/>
             <field name="is_approved">False</field>
+            <field name="doctor_id" ref="hr_hospital.demo_doctor_2"/>
         </record>
 
         <record id="demo_diagnosis_4" model="hr.hospital.diagnosis">
@@ -35,6 +38,7 @@
             <field name="patient_visit_id" ref="hr_hospital.demo_patient_visit_3"/>
             <field name="disease_id" ref="hr_hospital.hrh_disease_data_6"/>
             <field name="is_approved">False</field>
+            <field name="doctor_id" ref="hr_hospital.demo_doctor_1"/>
         </record>
 
         <record id="demo_diagnosis_5" model="hr.hospital.diagnosis">
@@ -42,6 +46,7 @@
             <field name="patient_visit_id" ref="hr_hospital.demo_patient_visit_4"/>
             <field name="disease_id" ref="hr_hospital.hrh_disease_data_4"/>
             <field name="is_approved">True</field>
+            <field name="doctor_id" ref="hr_hospital.demo_doctor_3"/>
         </record>
 
     </data>
